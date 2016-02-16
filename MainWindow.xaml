@@ -1,0 +1,74 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="主窗口" Height="400" Width="600" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        RenderTransformOrigin="0.5,0.5">
+    
+    <Border x:Name="wb" CornerRadius="5" BorderThickness="3" BorderBrush="#FF1A55AA">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.8,1" StartPoint="0.33,0">
+                <GradientStop Color="#FF50B3E2" Offset="0"/>
+                <GradientStop Color="#FF084168" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Border.Clip>
+            <GeometryGroup FillRule="Nonzero">
+                <RectangleGeometry x:Name="r1" Rect="0,50,1000,100"/>
+                <RectangleGeometry x:Name="r2" Rect="0,220,1000,100"/>
+                <RectangleGeometry x:Name="r3" Rect="50,0,90,1000"/>
+                <RectangleGeometry x:Name="r4" Rect="360,0,160,1000"/>
+            </GeometryGroup>
+        </Border.Clip>
+        <Grid x:Name="root" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="captiobd" Grid.Row="0" Background="#FF1A55AA" Height="32" MouseLeftButtonDown="onLDown">
+                <Grid>
+                    <TextBlock Text="{Binding Path=Title,RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType=Window}}"
+                               Foreground="White" FontWeight="Bold" FontSize="18" FontFamily="宋体"
+                               HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="9,0,0,5"/>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                                Margin="0,0,9,11">
+                        <Button Style="{DynamicResource minCaptionButtonStyle}" Click="onMin" ToolTip="最小化"/>
+                        <Button Margin="6,0,0,0" Style="{DynamicResource closeCaptionButtonStyle}" Click="onClick" ToolTip="关闭"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Button Content="关闭" Grid.Row="1" Click="onClick" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Padding="15"  />
+        </Grid>
+    </Border>
+    <Window.RenderTransform>
+        <TransformGroup>
+            <RotateTransform x:Name="rt" Angle="0"/>
+            <ScaleTransform x:Name="sct" ScaleX="1" ScaleY="1"/>
+        </TransformGroup>
+    </Window.RenderTransform>
+    <Window.Resources>
+        <Storyboard x:Key="start">
+            <RectAnimation Storyboard.TargetName="r1" Storyboard.TargetProperty="Rect"
+                           Duration="0:0:6" To="0,0,900,900"/>
+            <RectAnimation Storyboard.TargetName="r2" Storyboard.TargetProperty="Rect"
+                           Duration="0:0:5" To="20,20,700,800"/>
+            <RectAnimation Storyboard.TargetName="r3" Storyboard.TargetProperty="Rect"
+                           Duration="0:0:6" To="85,0,850,700"/>
+            <RectAnimation Storyboard.TargetName="r4" Storyboard.TargetProperty="Rect"
+                           Duration="0:0:6" To="0,250,800,700"/>
+            <DoubleAnimation Storyboard.TargetName="wb" Storyboard.TargetProperty="Opacity"
+                             From="0.2" To="1" Duration="0:0:6"/>
+        </Storyboard>
+        <Storyboard x:Key="end">
+            <DoubleAnimation Storyboard.TargetName="wb" Storyboard.TargetProperty="Opacity"
+                             Duration="0:0:5" From="1" To="0"/>
+            <DoubleAnimation Storyboard.TargetName="rt" Storyboard.TargetProperty="Angle"
+                             Duration="0:0:5" From="0" To="720"/>
+            <DoubleAnimation Storyboard.TargetName="sct" Storyboard.TargetProperty="ScaleX"
+                             Duration="0:0:5" From="1" To="0.3"/>
+            <DoubleAnimation Storyboard.TargetName="sct" Storyboard.TargetProperty="ScaleY"
+                             Duration="0:0:5" From="1" To="0.1"/>
+        </Storyboard>
+    </Window.Resources>
+</Window>

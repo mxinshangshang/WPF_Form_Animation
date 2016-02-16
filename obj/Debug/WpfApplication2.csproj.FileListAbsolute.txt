@@ -1,0 +1,14 @@
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.pdb
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.baml
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\App.baml
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.g.cs
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\App.g.cs
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.exe
+C:\Users\jiang\Desktop\窗口的启动与关闭动画\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.pdb
